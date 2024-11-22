@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #00e6e6; /* Neon Cyan */
+    overflow-x: hidden;
+}
+
+/* Background Video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensures center alignment of the video */
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #00e6e6;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00e6e6;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff3c00; /* Neon Red */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 150px 20px;
+    background: transparent;
+    color: white;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+/* Skills and Projects Section */
+.skills-container, .projects-container, #contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #ff3c00, 0 0 20px #ff3c00;
+    margin-bottom: 30px;
+}
+
+.skill, .project {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00e6e6;
+    border-radius: 10px;
+    color: #fff;
+    text-shadow: 0 0 5px #00e6e6;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover, .project:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.skill h3, .project h3 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+}
+
+.project ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Social Links */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 20px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        padding: 100px 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .skill, .project {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 80px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .skills-container, .projects-container, #contact {
+        padding: 30px 15px;
+    }
+
+    .skill, .project {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .skill h3, .project h3 {
+        font-size: 1.2em;
+    }
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
